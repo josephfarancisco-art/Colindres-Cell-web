@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0866c6">
+  <meta name="description" content="Colindres Cell — accesorios para celulares, vidrios templados, cobertores, cargadores, cables y audífonos en Cofradía, Cortés.">
+  <meta name="robots" content="index, follow">
+  <title>Colindres Cell | Accesorios para celulares</title>
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Colindres Cell inicio">
+        <img src="assets/logo.jpg" alt="Logo Colindres Cell">
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a class="nav-wa" id="navWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">REPARACIÓN · COPIAS · IMPRESIONES</span>
+          <h1>Todo para tu celular,<br><span>en un solo lugar.</span></h1>
+          <p>Accesorios, protección, carga y audio para mantener tu teléfono listo para todo.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" id="heroWhatsApp" href="#" target="_blank" rel="noopener">Comprar por WhatsApp</a>
+            <a class="btn btn-outline" id="googleMaps" href="#" target="_blank" rel="noopener">Ver ubicación</a>
+          </div>
+          <div class="mini-points">
+            <span>✓ Atención personalizada</span>
+            <span>✓ Productos para varios modelos</span>
+            <span>✓ Compra fácil por WhatsApp</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="assets/flyer.jpg" alt="Promoción de Colindres Cell" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">CATÁLOGO</span>
+            <h2>Accesorios para celulares</h2>
+          </div>
+          <p>Consulta disponibilidad y precio del modelo que necesitas.</p>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="section section-blue">
+      <div class="container about-grid">
+        <div>
+          <span class="eyebrow light">COLINDRES CELL</span>
+          <h2>Soluciones móviles a tu alcance.</h2>
+          <p>Somos una tienda enfocada en accesorios para celulares y atención cercana. Pregunta por el modelo de tu teléfono y te ayudamos a encontrar el accesorio adecuado.</p>
+          <a class="btn btn-white" id="aboutWhatsApp" href="#" target="_blank" rel="noopener">Consultar disponibilidad</a>
+        </div>
+        <div class="feature-list">
+          <div><strong>01</strong><span>Vidrios y protección</span></div>
+          <div><strong>02</strong><span>Cargadores y cables</span></div>
+          <div><strong>03</strong><span>Audífonos cableados y Bluetooth</span></div>
+          <div><strong>04</strong><span>Cobertores para diferentes modelos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ubicacion" class="section">
+      <div class="container location-card">
+        <div class="location-icon">⌖</div>
+        <div>
+          <span class="eyebrow">ENCUÉNTRANOS</span>
+          <h2 id="addressTitle">Cofradía, Cortés</h2>
+          <p id="addressText">Rancho Mescalar, 3 cuadras adentro después de la Iglesia Rosa de Sarón.</p>
+          <div class="location-actions">
+            <a class="btn btn-primary" id="mapsButton" href="#" target="_blank" rel="noopener">Abrir Google Maps</a>
+            <a class="btn btn-outline" id="googleButton" href="#" target="_blank" rel="noopener">Buscar en Google</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-section">
+      <div class="container social-inner">
+        <div>
+          <span class="eyebrow">SÍGUENOS</span>
+          <h2>Estamos en redes sociales</h2>
+        </div>
+        <div class="socials">
+          <a id="facebook" href="#" target="_blank" rel="noopener">Facebook</a>
+          <a id="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a id="tiktok" href="#" target="_blank" rel="noopener">TikTok</a>
+          <a id="socialWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>Colindres Cell</strong>
+        <span id="footerSlogan">Soluciones móviles a tu alcance</span>
+      </div>
+      <div>© <span id="year"></span> Colindres Cell</div>
+    </div>
+  </footer>
+
+  <a class="floating-wa" id="floatingWhatsApp" href="#" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">✆</a>
+
+  <script src="config.js"></script>
+  <script>
+    const waText = encodeURIComponent("Hola Colindres Cell, quiero consultar por un accesorio para mi celular.");
+    const waUrl = `https://wa.me/${STORE.whatsappNumber}?text=${waText}`;
+
+    ["navWhatsApp","heroWhatsApp","aboutWhatsApp","socialWhatsApp","floatingWhatsApp"].forEach(id => {
+      document.getElementById(id).href = waUrl;
+    });
+
+    document.getElementById("mapsButton").href = STORE.googleMapsUrl;
+    document.getElementById("googleMaps").href = STORE.googleMapsUrl;
+    document.getElementById("googleButton").href = STORE.googleUrl;
+    document.getElementById("addressTitle").textContent = STORE.addressTitle;
+    document.getElementById("addressText").textContent = STORE.addressText;
+    document.getElementById("footerSlogan").textContent = STORE.slogan;
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const socialMap = {
+      facebook: STORE.social.facebook,
+      instagram: STORE.social.instagram,
+      tiktok: STORE.social.tiktok
+    };
+    Object.entries(socialMap).forEach(([id, url]) => {
+      const el = document.getElementById(id);
+      el.href = url || "#";
+      if (!url || url === "#") {
+        el.classList.add("disabled-social");
+        el.title = "Agrega el enlace en config.js";
+      }
+    });
+
+    const grid = document.getElementById("productGrid");
+    PRODUCTS.forEach(product => {
+      const card = document.createElement("article");
+      card.className = "product-card";
+      card.innerHTML = `
+        <div class="product-icon">${product.icon}</div>
+        <span class="product-tag">${product.tag}</span>
+        <h3>${product.title}</h3>
+        <p>${product.text}</p>
+        <a href="${waUrl}" target="_blank" rel="noopener">Consultar →</a>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
