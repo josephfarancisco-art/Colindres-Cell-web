@@ -23,9 +23,9 @@ const STORE = {
     "https://www.google.com/maps/search/?api=1&query=Colindres%20Cell%20Rancho%20Mescalar%20Cofrad%C3%ADa%20Cort%C3%A9s%20Honduras",
 
   social: {
-    facebook: "#",
+    facebook: "https://www.facebook.com/share/18FTr5w3cq/?mibextid=wwXIfr",
     instagram: "#",
-    tiktok: "#"
+    tiktok:  "https://www.tiktok.com/@colindrescell?_r=1&_t=ZS-99Ot6FSOs8j"
   }
 };
 
